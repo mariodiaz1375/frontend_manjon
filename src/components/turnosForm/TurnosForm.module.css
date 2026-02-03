@@ -1,0 +1,228 @@
+/* ======================================================= */
+/* Contenedor Principal del Formulario - Tema Oscuro Elegante */
+/* ======================================================= */
+.turnos-form {
+    max-width: 500px;
+    margin: 0;
+    padding: 28px;
+    border: 1px solid #e1e5e9;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    background: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Encabezado */
+.turnos-form h3 {
+    color: #1a1f36;
+    text-align: center;
+    font-size: 1.6em;
+    font-weight: 700;
+    margin-bottom: 25px;
+    padding-bottom: 12px;
+    border-bottom: 3px solid #1a1f36;
+    letter-spacing: 0.3px;
+}
+
+/* Estilos para etiquetas y espaciado */
+.turnos-form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #1a1f36;
+    letter-spacing: 0.2px;
+}
+
+/* ======================================================= */
+/* CAMPO DE BÚSQUEDA */
+/* ======================================================= */
+.search-input {
+    width: 100%;
+    padding: 12px 18px;
+    text-align: center;
+    border: 2px solid #1a1f36;
+    border-radius: 20px;
+    font-size: 0.95em;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    background: white;
+    color: #1a1f36;
+    font-weight: 500;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #0f1419;
+    box-shadow: 0 0 0 3px rgba(26, 31, 54, 0.2);
+}
+
+.search-input::placeholder {
+    color: #6b7280;
+    font-style: italic;
+}
+
+/* Mensaje de alerta informativa */
+.alert-info {
+    color: #92400e;
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.15) 0%, rgba(245, 158, 11, 0.15) 100%);
+    border: 2px solid #fbbf24;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* ======================================================= */
+/* Campos de entrada (input, select, textarea) */
+/* ======================================================= */
+.turnos-form input[type="date"],
+.turnos-form select,
+.turnos-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #1a1f36;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    background: white;
+    color: #1a1f36;
+    font-weight: 500;
+}
+
+/* Efecto de foco para los campos */
+.turnos-form input:focus,
+.turnos-form select:focus,
+.turnos-form textarea:focus {
+    border-color: #0f1419;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(26, 31, 54, 0.2);
+}
+
+.turnos-form select:disabled {
+    background: linear-gradient(135deg, rgba(156, 163, 175, 0.15) 0%, rgba(107, 114, 128, 0.15) 100%);
+    cursor: not-allowed;
+    opacity: 0.7;
+    color: #6b7280;
+}
+
+.turnos-form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* ======================================================= */
+/* Mensaje de Error */
+/* ======================================================= */
+.error-message {
+    color: white;
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
+}
+
+/* ======================================================= */
+/* Botón de Envío */
+/* ======================================================= */
+.turnos-form button[type="submit"] {
+    display: block;
+    width: 100%;
+    background: linear-gradient(180deg, #1a1f36 0%, #0f1419 100%);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(26, 31, 54, 0.3);
+    margin-top: 25px;
+}
+
+.turnos-form button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(26, 31, 54, 0.4);
+}
+
+.turnos-form button[type="submit"]:active {
+    transform: translateY(0);
+}
+
+/* ======================================================= */
+/* Botón Administrar Horarios (+) */
+/* ======================================================= */
+.turnos-form button[type="button"] {
+    background: linear-gradient(180deg, #1a1f36 0%, #0f1419 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(26, 31, 54, 0.3);
+}
+
+.turnos-form button[type="button"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(26, 31, 54, 0.4);
+}
+
+/* ======================================================= */
+/* Botón Cancelar Edición */
+/* ======================================================= */
+.cancel-edit-btn {
+    display: block;
+    width: 100%;
+    background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(107, 114, 128, 0.3);
+    margin-top: 15px;
+}
+
+.cancel-edit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(107, 114, 128, 0.4);
+}
+
+.cancel-edit-btn:active {
+    transform: translateY(0);
+}
+
+/* ======================================================= */
+/* Responsive */
+/* ======================================================= */
+@media (max-width: 768px) {
+    .turnos-form {
+        padding: 20px;
+        margin: 0 auto;
+    }
+
+    .turnos-form h3 {
+        font-size: 1.3em;
+    }
+
+    .turnos-form button[type="submit"],
+    .cancel-edit-btn {
+        padding: 12px 24px;
+    }
+}
+
+

@@ -1,0 +1,467 @@
+/* HistoriaClinicaList.module.css - Tema Oscuro Elegante */
+
+.hcListContainer {
+    padding: 28px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    margin-top: 20px;
+    border: 1px solid #e1e5e9;
+}
+
+/* Contenedor del encabezado con botón de filtros */
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    border-bottom: 2px solid rgba(26, 31, 54, 0.1);
+    padding-bottom: 15px;
+}
+
+.hcListContainer h3 {
+    color: #1a1f36;
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.3em;
+    letter-spacing: 0.3px;
+}
+
+/* Botón para mostrar/ocultar filtros */
+.toggleFiltrosButton {
+    background: linear-gradient(180deg, #1a1f36 0%, #0f1419 100%);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(26, 31, 54, 0.3);
+}
+
+.toggleFiltrosButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(26, 31, 54, 0.4);
+}
+
+/* Panel de filtros */
+.filtrosPanel {
+    background: linear-gradient(135deg, rgba(26, 31, 54, 0.03) 0%, rgba(15, 20, 25, 0.05) 100%);
+    border: 1px solid rgba(26, 31, 54, 0.1);
+    border-radius: 10px;
+    padding: 22px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.filtrosGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+.filtroItem {
+    display: flex;
+    flex-direction: column;
+}
+
+.filtroItem label {
+    font-weight: 600;
+    color: #1a1f36;
+    margin-bottom: 6px;
+    font-size: 0.9em;
+    letter-spacing: 0.2px;
+}
+
+.filtroItem input,
+.filtroItem select {
+    padding: 10px 14px;
+    border: 1px solid #e1e5e9;
+    border-radius: 8px;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+    background: white;
+    color: #1a1f36;
+    font-weight: 500;
+}
+
+.filtroItem input:focus,
+.filtroItem select:focus {
+    outline: none;
+    border-color: #1a1f36;
+    box-shadow: 0 0 0 3px rgba(26, 31, 54, 0.1);
+}
+
+.filtrosAcciones {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.limpiarFiltrosButton {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
+}
+
+.limpiarFiltrosButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
+}
+
+/* Mensaje de no resultados */
+.noResultados {
+    text-align: center;
+    color: #6b7280;
+    font-style: italic;
+    padding: 25px;
+    background: linear-gradient(135deg, rgba(26, 31, 54, 0.03) 0%, rgba(15, 20, 25, 0.05) 100%);
+    border-radius: 10px;
+    border: 1px dashed rgba(26, 31, 54, 0.2);
+    font-weight: 500;
+}
+
+/* Estilos de la Tabla */
+.hcTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+    background-color: #fff;
+    font-size: 0.95em;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.hcTable th,
+.hcTable td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid #e1e5e9;
+}
+
+.hcTable th {
+    background: linear-gradient(180deg, #1a1f36 0%, #0f1419 100%);
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    letter-spacing: 0.5px;
+}
+
+.hcTable tbody tr {
+    transition: all 0.2s ease;
+}
+
+.hcTable tbody tr:hover {
+    background-color: rgba(26, 31, 54, 0.03);
+    transform: translateX(2px);
+}
+
+.hcTable tbody tr td {
+    color: #1a1f36;
+    font-weight: 500;
+}
+
+/* Indicadores de Estado */
+.finalizada {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    font-weight: 700;
+    font-size: 0.8em;
+    letter-spacing: 0.3px;
+    box-shadow: 0 2px 6px rgba(16, 185, 129, 0.3);
+}
+
+.abierta {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: white;
+    font-weight: 700;
+    font-size: 0.8em;
+    letter-spacing: 0.3px;
+    box-shadow: 0 2px 6px rgba(245, 158, 11, 0.3);
+}
+
+/* Botones de Acción */
+.viewButton {
+    background: linear-gradient(180deg, #1a1f36 0%, #0f1419 100%);
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.85em;
+    font-weight: 600;
+    margin-right: 6px;
+    margin-bottom: 4px;
+    box-shadow: 0 2px 6px rgba(26, 31, 54, 0.3);
+}
+
+.viewButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(26, 31, 54, 0.4);
+}
+
+.editButton {
+    background: linear-gradient(180deg, #1a1f36 0%, #0f1419 100%);
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.85em;
+    font-weight: 600;
+    margin-right: 6px;
+    margin-bottom: 4px;
+    box-shadow: 0 2px 6px rgba(26, 31, 54, 0.3);
+}
+
+.editButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(26, 31, 54, 0.4);
+}
+
+.reabrirButton {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.85em;
+    font-weight: 600;
+    margin-right: 6px;
+    margin-bottom: 4px;
+    box-shadow: 0 2px 6px rgba(16, 185, 129, 0.3);
+}
+
+.reabrirButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+}
+
+.finalizarButton {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.85em;
+    font-weight: 600;
+    margin-right: 6px;
+    margin-bottom: 4px;
+    box-shadow: 0 2px 6px rgba(239, 68, 68, 0.3);
+}
+
+.finalizarButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+}
+
+.pagosButton {
+    background: linear-gradient(135deg, #eab308 0%, #ca8a04 100%);
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.85em;
+    font-weight: 600;
+    margin-bottom: 4px;
+    box-shadow: 0 2px 6px rgba(234, 179, 8, 0.3);
+}
+
+.pagosButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(234, 179, 8, 0.4);
+}
+
+.newHcButton {
+    background: linear-gradient(180deg, #1a1f36 0%, #0f1419 100%);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    float: right;
+    box-shadow: 0 2px 8px rgba(26, 31, 54, 0.3);
+}
+
+.newHcButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(26, 31, 54, 0.4);
+}
+
+/* Mensaje de Error */
+.error {
+    color: white;
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
+}
+
+/* ESTILOS DE PAGINACIÓN */
+.paginacionContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 25px 0;
+    padding: 18px;
+    background: linear-gradient(135deg, rgba(26, 31, 54, 0.03) 0%, rgba(15, 20, 25, 0.05) 100%);
+    border-radius: 10px;
+}
+
+.paginacionButton {
+    background: linear-gradient(180deg, #1a1f36 0%, #0f1419 100%);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(26, 31, 54, 0.3);
+}
+
+.paginacionButton:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(26, 31, 54, 0.4);
+}
+
+.paginacionButton:disabled {
+    background: linear-gradient(180deg, #9ca3af 0%, #6b7280 100%);
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.paginacionInfo {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.paginacionNumero {
+    background: white;
+    color: #1a1f36;
+    border: 2px solid #e1e5e9;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    min-width: 40px;
+}
+
+.paginacionNumero:hover {
+    background: rgba(26, 31, 54, 0.05);
+    border-color: #1a1f36;
+}
+
+.paginaActiva {
+    background: linear-gradient(180deg, #1a1f36 0%, #0f1419 100%) !important;
+    color: white !important;
+    border-color: #1a1f36 !important;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(26, 31, 54, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hcListContainer {
+        padding: 20px;
+    }
+
+    .headerContainer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .toggleFiltrosButton {
+        width: 100%;
+    }
+
+    .filtrosGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .filtrosAcciones {
+        justify-content: stretch;
+    }
+
+    .limpiarFiltrosButton {
+        width: 100%;
+    }
+
+    .hcTable {
+        font-size: 0.85em;
+    }
+
+    .hcTable th,
+    .hcTable td {
+        padding: 10px 12px;
+    }
+
+    .viewButton,
+    .editButton,
+    .reabrirButton,
+    .finalizarButton,
+    .pagosButton {
+        padding: 6px 10px;
+        font-size: 0.75em;
+        margin-right: 4px;
+        margin-bottom: 4px;
+    }
+
+    .newHcButton {
+        width: 100%;
+        float: none;
+    }
+
+    .paginacionContainer {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .paginacionButton {
+        flex: 1;
+        min-width: 100px;
+    }
+
+    .paginacionInfo {
+        width: 100%;
+        justify-content: center;
+    }
+}
