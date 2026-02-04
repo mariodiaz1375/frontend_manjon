@@ -169,7 +169,7 @@ const handleManipulateList = async (listType, action, id, newName) => {
     }
 
     try {
-      const response = await fetch('http://localhost:8000/api/personal/me/', {
+      const response = await fetch('https://backend-manjon.onrender.com/api/personal/me/', {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json',

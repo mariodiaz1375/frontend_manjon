@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // 1. INSTANCIA DE AXIOS CON CONFIGURACIÓN BASE
 const pagosApi = axios.create({
-    baseURL: 'http://localhost:8000/api/pagos',
+    baseURL: 'https://backend-manjon.onrender.com/api/pagos',
     headers: {
         'Content-Type': 'application/json'
     }

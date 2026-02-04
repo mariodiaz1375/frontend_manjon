@@ -3,7 +3,7 @@ import axios from 'axios';
 // 1. INSTANCIA DE AXIOS
 // Creamos una instancia con la URL base de tu ViewSet de Historias Clínicas
 const historiasApi = axios.create({
-    baseURL: 'http://localhost:8000/api/historias_clinicas', // Base URL: /api/historias_clinicas/
+    baseURL: 'https://backend-manjon.onrender.com/api/historias_clinicas', // Base URL: /api/historias_clinicas/
     headers: {
         'Content-Type': 'application/json'
         // NOTA: La autenticación (Bearer Token) debe ser manejada por un interceptor 

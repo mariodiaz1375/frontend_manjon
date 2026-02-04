@@ -16,7 +16,7 @@ const ForgotPassword = () => {
     setError('');
 
     try {
-      const response = await fetch('http://localhost:8000/api/personal/auth/password-reset/', {
+      const response = await fetch('https://backend-manjon.onrender.com/api/personal/auth/password-reset/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

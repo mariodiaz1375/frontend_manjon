@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const pacientesApi = axios.create({
-    baseURL: 'http://localhost:8000/api/pacientes',
+    baseURL: 'https://backend-manjon.onrender.com/api/pacientes',
     headers: {
         'Content-Type': 'application/json'
     }

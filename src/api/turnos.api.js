@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // 1. INSTANCIA DE AXIOS
 const turnosApi = axios.create({
-    baseURL: 'http://localhost:8000/api/turnos',
+    baseURL: 'https://backend-manjon.onrender.com/api/turnos',
     headers: {
         'Content-Type': 'application/json'
     }
