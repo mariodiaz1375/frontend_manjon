@@ -43,7 +43,7 @@ const Login = () => {
     setLoading(true);
 
     try {
-      const response = await fetch('https://backend-manjon.onrender.com//api/personal/auth/login/', {
+      const response = await fetch('https://backend-manjon.onrender.com/api/personal/auth/login/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -86,7 +86,7 @@ const Login = () => {
 
   const getUserInfo = async (token) => {
     try {
-      const response = await fetch('https://backend-manjon.onrender.com//api/personal/me/', {
+      const response = await fetch('https://backend-manjon.onrender.com/api/personal/me/', {
         headers: {
           'Authorization': `Bearer ${token}`,
         },
