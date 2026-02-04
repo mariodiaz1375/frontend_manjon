@@ -2,7 +2,7 @@ import axios from 'axios'
 
 // La baseURL ya apunta a 'http://localhost:8000/api/personal'
 const personalApi = axios.create({
-    baseURL: 'http://localhost:8000/api/personal',
+    baseURL: 'https://backend-manjon.onrender.com//api/personal',
     headers: {
         'Content-Type': 'application/json'
     }
