@@ -2,7 +2,7 @@ import axios from 'axios'
 
 // La baseURL ya apunta a 'http://localhost:8000/api/personal'
 const personalApi = axios.create({
-    baseURL: 'https://backend-manjon.onrender.com//api/personal',
+    baseURL: 'https://backend-manjon.onrender.com/api/personal',
     headers: {
         'Content-Type': 'application/json'
     }
@@ -131,7 +131,7 @@ export const getCurrentUser = async () => {
         throw new Error('Usuario no autenticado, falta el token.');
     }
 
-    const response = await fetch('http://localhost:8000/api/personal/me/', {
+    const response = await fetch('https://backend-manjon.onrender.com/api/personal/me/', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
